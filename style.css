@@ -1,0 +1,151 @@
+body {
+    background-color:  white;
+}
+
+p {
+    margin: 0;
+}
+
+.container{
+    display: flex;  
+    background : #BFBFBF;;
+    align-items: center;
+    height: 80px;
+    margin: 0;
+}
+
+.timer{ 
+    color:#F20587; 
+    font-family: Consolas, monaco, monospace;
+    font-size: large;
+}
+
+.time{
+    background-color:  #BFBFBF;;
+}
+
+.minutes {
+    padding-left: 20px;
+}
+
+.seconds {
+    padding-right: 20px;
+}
+
+.buttons { 
+    display: flex;
+    background:#262626;
+    width:90px; 
+    height : 80px;
+    border: none;
+}
+
+.button {
+    color:#F20587; 
+    font-family: Consolas, monaco, monospace;
+    font-size: large;
+    background-color:  #BFBFBF;;
+    border: none;
+}
+
+#stop{    
+    padding-right: 20px;
+}
+
+.times {
+    width: 45px;
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-right: 40px;
+}
+
+#workTime {
+    color:#0587f2;  
+    font-family: Consolas, monaco, monospace;
+    font-size: large;
+    width: 35px;
+    border: none;
+    background-color:  #BFBFBF;;
+}
+
+#breakTime {
+    color:#0587f2;  
+    font-family: Consolas, monaco, monospace;
+    font-size: large;
+    width: 35px;
+    border: none;
+    background-color:  #BFBFBF;;
+}
+
+::placeholder {
+    color:#0587f2; 
+    font-family: Consolas, monaco, monospace;
+    font-size: large;
+}
+
+.timeLabel {
+    font-family: Consolas, monaco, monospace;
+    font-size: small;
+    padding-top: 2px;
+}
+
+#notes {
+    width: 400px;
+    padding: 10px;
+    color:#0587f2;
+    font-family: Consolas, monaco, monospace;
+    font-size: large;
+    height: 1em;
+    margin: auto;
+    border: none;
+    background-color:  #BFBFBF;;
+}
+
+#workLogContainer {
+    margin-top: 40px;
+    margin-left: 80px;
+    width: 80%;
+    height: 500px;
+    padding: 20px;
+    color: #0587f2;
+    font-family: Consolas, monaco, monospace;
+    font-size: medium;
+}
+
+/* notes color #87f205 */
+
+/* Color Theme Swatches in Hex 
+.LABRA-light-thinking-1-hex { color: #F2F2F2; }
+.LABRA-light-thinking-2-hex { color: #BFBFBF; }
+.LABRA-light-thinking-3-hex { color: #737373; }
+.LABRA-light-thinking-4-hex { color: #404040; }
+.LABRA-light-thinking-5-hex { color: #262626; }
+*/
+
+/* Color Theme Swatches in RGBA 
+.LABRA-light-thinking-1-rgba { color: rgba(242, 242, 242, 1); }
+.LABRA-light-thinking-2-rgba { color: rgba(191, 191, 191, 1); }
+.LABRA-light-thinking-3-rgba { color: rgba(114, 114, 114, 1); }
+.LABRA-light-thinking-4-rgba { color: rgba(63, 63, 63, 1); }
+.LABRA-light-thinking-5-rgba { color: rgba(38, 38, 38, 1); }
+*/
+
+
+
+/* Color Theme Swatches in Hex 
+{ color: #F20587; }
+{ color: #F205E2; }
+{ color: #0597F2; }
+{ color: #05AFF2; }
+{ color: #F25C05; }
+*/
+
+/* Color Theme Swatches in RGBA
+.Abstract-trendy-neon-colored-psychedelic-fluorescent-striped-zebra-textured-neon-background-1-rgba { color: rgba(242, 4, 135, 1); }
+.Abstract-trendy-neon-colored-psychedelic-fluorescent-striped-zebra-textured-neon-background-2-rgba { color: rgba(242, 4, 226, 1); }
+.Abstract-trendy-neon-colored-psychedelic-fluorescent-striped-zebra-textured-neon-background-3-rgba { color: rgba(4, 151, 242, 1); }
+.Abstract-trendy-neon-colored-psychedelic-fluorescent-striped-zebra-textured-neon-background-4-rgba { color: rgba(4, 174, 242, 1); }
+.Abstract-trendy-neon-colored-psychedelic-fluorescent-striped-zebra-textured-neon-background-5-rgba { color: rgba(242, 91, 4, 1); }
+*/
