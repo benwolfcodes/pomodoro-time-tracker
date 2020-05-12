@@ -1,7 +1,7 @@
-var today = new Date();
-var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-var time = today.getHours() + ":" + today.getMinutes();
-var dateTime = date+' '+time;
+// var today = new Date();
+// var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+// var time = today.getHours() + ":" + today.getMinutes();
+// var dateTime = date+' '+time;
 var num;
 
 var pomodoro = {
@@ -19,6 +19,9 @@ var pomodoro = {
     logLine : null,
     reason : null,
     ding : null,
+    today : null,
+    date : null,
+    dateTime : null,
 
     init : function(){
         var self = this;
@@ -46,13 +49,20 @@ var pomodoro = {
         this.started = started;
     },
 
+    getDateAndTime : function () {
+        this.today = new Date();
+        this.date = this.today.getFullYear()+'-'+(this.today.getMonth()+1)+'-'+this.today.getDate();
+        this.time = this.today.getHours() + ":" + this.toDoubleDigit(this.today.getMinutes());
+        this.dateTime = this.date+' '+this.time;
+    },
+
     startWork : function() {
         this.workTime = document.getElementById('workTime').value;
         console.log(this.workTime);
         this.workType = document.getElementById('notes').value;
         this.resetVariables(this.workTime, 0, true);
-
-        this.log = "* " + dateTime + " - " + this.workTime + " minutes - " + this.workType;
+        this.getDateAndTime();
+        this.log = "* " + this.dateTime + " - " + this.workTime + " minutes - " + this.workType;
         this.updateLog(this.log);
     },
 
@@ -60,20 +70,21 @@ var pomodoro = {
         this.breakTime = document.getElementById('breakTime').value;
         console.log(this.breakTime);
         this.resetVariables(this.breakTime, 0, true);
-
-        this.log = "* " + dateTime + " - " + this.breakTime + " minute break.";
+        this.getDateAndTime();
+        this.log = "* " + this.dateTime + " - " + this.breakTime + " minute break.";
         this.updateLog(this.log);
     },
 
     stopTimer : function(){
         if (this.started == true) {
             this.started = false;
-            
-            this.log = "* " + dateTime + " - PAUSED.";
+            this.getDateAndTime();
+            this.log = "* " + this.dateTime + " - PAUSED.";
             
         } else if (this.started == false) {
             this.started = true;
-            this.log = "* " + dateTime + " - RESUMED.";
+            this.getDateAndTime();
+            this.log = "* " + this.dateTime + " - RESUMED.";
         }
         this.updateLog(this.log);
         this.updateDom();
